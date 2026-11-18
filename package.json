@@ -2,9 +2,12 @@
   "name": "devsecops-access-control",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -13,7 +16,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/tnsay/devsecops-access-control/issues"
   },
